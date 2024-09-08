@@ -30,7 +30,7 @@ A modern, responsive Tic-Tac-Toe game built using **React**, **TypeScript**, and
 
 ## Demo
 
-Try the live version of the game [here](https://example.com/demo).
+Try the live version of the game [here](https://tic-tac-toe-rust-chi.vercel.app/).
 
 ## Features
 

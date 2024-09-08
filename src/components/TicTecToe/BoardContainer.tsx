@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import BoardSquare from '../BoradInputComp/BoardSquare';
 import Board from './Board';
+import toast from 'react-hot-toast';
 
 function BoardContainer() {
     const [squares, setSquares] = useState<Array<string | null>>(Array(9).fill(null))
@@ -25,12 +26,27 @@ function BoardContainer() {
     const isDraw = squares.every(square => square !== null) && !winner;
 
 
-    const status = winner
-        ? `Winner: ${winner}`
-        : isDraw
-            ? "It's a draw!"
-            : `Next player: ${xIsNext ? 'X' : 'O'}`;
-
+    // let status = winner
+    //     ? `Winner: ${winner}`
+    //     : isDraw
+    //         ? "It's a draw!"
+    //         : `Next player: ${xIsNext ? 'X' : 'O'}`;
+    let status = "" 
+    if(winner) {
+        status = `Winner: ${winner} Please restart the game..`
+        toast(status , {
+            icon: '👏',
+        })
+    }else {
+        if(isDraw) {
+            status = "It's a draw! please restart the game"
+            toast(status , {
+                icon: '😒',
+            })
+        }else {
+            status = `Next player: ${xIsNext ? 'X' : 'O'}`
+        }
+    }
 
 
 

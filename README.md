@@ -59,7 +59,7 @@ Ensure you have **Node.js** and **npm** or **yarn** installed on your system. Yo
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/tic-tac-toe-react-ts.git
+git clone https://github.com/JasrajChouhan/tic-tac-toe-react-ts.git
 cd tic-tac-toe-react-ts
 
 ```
